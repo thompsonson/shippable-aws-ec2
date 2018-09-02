@@ -51,7 +51,7 @@ jobs:
                 - ec2_keypair: "dr_us_east_1"
                 - ec2_tag_Role: "demo_machines"
                 - ec2_volume_size: 30
-                - ec2_count: 1
+                - ec2_count: 2
                 # - security_group_id: <hardcoded value> # Uncomment if you deleted the aws_vpc_info resource
                 # - public_subnet_id: <hardcoded value>  # Uncomment if you deleted the aws_vpc_info resource            
           script:
@@ -66,4 +66,3 @@ jobs:
             - ansible-playbook -v ec2_prov_playbook.yml
       - OUT: aws_ec2_info
         overwrite: true
-  
